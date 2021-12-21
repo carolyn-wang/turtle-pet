@@ -10,8 +10,10 @@ jQuery(document).ready(function() {
     
   setInterval(function(){
     xp += ((mouseX - xp)/1000);
-    yp += ((mouseY - yp)/100);
+    yp += ((mouseY - yp)/1000);
     $("#turtle").css({left: xp +'px', top: yp +'px'});
   }, 2);
+  
+
 
 });
