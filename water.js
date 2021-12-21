@@ -1,11 +1,11 @@
 const rippleSettings = {
-    maxSize: 60,
+    maxSize: 40,
     animationSpeed: 10,
     strokeColor: [148, 217, 255],
   };
   
   const canvasSettings = {
-    blur: 3,
+    blur: 1,
     ratio: 1.7,
   };
   

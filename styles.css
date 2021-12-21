@@ -30,8 +30,8 @@
 /*turtle*/
 
 .turtle {
-  width: 500px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
   animation: walking-turtle-03 2s ease-in-out infinite alternate;
   position: relative;
   top: 58%;
@@ -45,7 +45,7 @@
   border-radius: 50%;
   background-color: #82C49F;
   position: relative;
-  top: 32%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -132,7 +132,7 @@
   border-right: 8px solid transparent;
   border-top: 35px solid #84C3A0;
   position: absolute;
-  bottom: 25%;
+  bottom: -8%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -148,16 +148,16 @@
 }
 
 #top-l, #bot-l{
-  left: 38%;
+  left: 20%;
 }
 #top-r, #bot-r{
-  right: 36%;
+  right: 15%;
 }
 #top-l, #top-r{
-  top: 40%;
+  top: 15%;
 }
 #bot-l, #bot-r{
-  bottom: 30%;
+  bottom: 10%;
 }
 
 
@@ -172,11 +172,11 @@
 }
 
 
-body {
+/* body {
   width: 100vw;
   height: 100vh;
   background-color: #DEF4E5;
-}
+} */
 
 @keyframes walking-turtle-01 {
   0% {
@@ -248,13 +248,13 @@ body {
     WATER (BACKGROUND) 
 ---------------------------*/
 
-/* html, body, #canvas {
+html, body, #canvas {
     width: 100%;
     height: 100%;
     margin: 0;
   }
   body {
-    background-color: #26b4f4;
+    background-color: #0078afc7;
   }
   #wrapper {
     position: absolute;
@@ -262,4 +262,4 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-  } */
+  }
