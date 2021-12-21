@@ -1,0 +1,52 @@
+<!-- credit: code modified from base code 
+    circle: https://codepen.io/quentindigital/pen/BapazMy 
+    water: https://codepen.io/thebarghest/pen/XQQzZm -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Carolyn Wang">
+    <meta name="description" content="pet turtle">
+    <!-- ICON -->
+    <link rel="icon" href="turtle_icon.png">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="turtle.scss">
+    <!-- TITLE -->
+    <title>pet turtle</title>
+</head>
+
+<body>
+
+
+    <main class="turtle">  
+        <div class="turtle__head"></div>
+        <div class="turtle__legs-left"></div>
+        <div class="turtle__legs-right"></div>
+        <div class="turtle__tail"></div>
+        
+        <section class="turtle__shell">
+        </section>
+      </main>
+
+    <!-- <canvas id="canvas"></canvas>
+    <div id="wrapper">
+    </div>
+
+    <span id="circle" class="circle"></span> -->
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load React components -->
+    <script src="turtle.js"></script>
+    <script src="water.js"></script>
+</body>
+
+</html>

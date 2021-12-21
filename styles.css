@@ -1,0 +1,259 @@
+:root {
+  --ui-background-color: rgba(55, 190, 252, 0.61);
+  --ui-dark-green: green;
+  --ui-light-green: rgb(13, 255, 13);
+  --ui-dark-shell: #363f3a;
+
+}
+
+/* body, html {
+	position: relative;
+	height: 100%; 
+	width : 100%;  
+	margin: 0;
+  background-color: var(--ui-background-color);
+} */
+
+/* ------------------------
+    TURTLE 
+---------------------------*/
+
+.circle {
+  position: absolute;
+  border: solid 1px var(--ui-dark-green);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--ui-dark-green);
+}
+
+
+/*turtle*/
+
+.turtle {
+  width: 500px;
+  height: 500px;
+  animation: walking-turtle-03 2s ease-in-out infinite alternate;
+  position: relative;
+  top: 58%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.turtle__head {
+  width: 75px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #82C49F;
+  position: relative;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* turtle right eye */
+.turtle__head:before,
+.turtle__head:after {
+  top: 20px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--ui-dark-shell);
+  content: '';
+  position: absolute;
+}
+
+.turtle__head::before {
+  left: 13px;
+}
+
+.turtle__head::after {
+  right: 13px;
+}
+
+
+.turtle__shell {
+  width: 150px;
+  height: 160px;
+  background-color: var(--ui-dark-shell);
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.turtle__shell:before,
+.turtle__shell:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.turtle__shell:before {
+  width: 100px;
+  height: 135px;
+  background-color: red;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* shell highlight */
+.turtle__shell:after {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.1;
+  top: 0;
+}
+
+
+div:before,
+div:after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+div:before {
+  top: -30px;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 30px solid #636E72;
+}
+
+div:after {
+  bottom: -30px;
+  left: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 30px solid #636E72;
+}
+
+
+.turtle__tail {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 35px solid #84C3A0;
+  position: absolute;
+  bottom: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.turtle__legs {
+  width: 30px;
+  height: 300px;
+  border-radius: 20%;
+  background-color: #82C49F;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.turtle__legs-left {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  animation: walking-turtle-01 2s ease-in-out infinite alternate;
+}
+
+.turtle__legs-right {
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation: walking-turtle-02 2s ease-in-out infinite alternate;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #DEF4E5;
+}
+
+@keyframes walking-turtle-01 {
+  0% {
+    transform: translate(-50%, -50%) rotate(-40deg)
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotate(-45deg)
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-30deg)
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(-45deg)
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-40deg)
+  }
+}
+
+@keyframes walking-turtle-02 {
+  0% {
+    transform: translate(-50%, -50%) rotate(40deg)
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotate(45deg)
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(35deg)
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(45deg)
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(30deg)
+  }
+}
+
+@keyframes walking-turtle-03 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg)
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotate(3deg)
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-1deg)
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(2deg)
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-1deg)
+  }
+}
+
+/* ------------------------
+    WATER (BACKGROUND) 
+---------------------------*/
+
+/* html, body, #canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background-color: #26b4f4;
+  }
+  #wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  } */
