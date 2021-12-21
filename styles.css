@@ -84,7 +84,7 @@
 }
 
 .turtle__head,
-.turtle__leg,
+.turtle__legs,
 .turtle__shell{
   box-shadow: 0px 10px 15px var(--ui-shadow) ;
 }
