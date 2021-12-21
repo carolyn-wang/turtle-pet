@@ -140,7 +140,7 @@
 }
 
 /* turtle legs */
-.turtle__leg{
+#top-l, #bot-l, #top-r, #bot-r{
   width: 20px;
   height: 40px;
   border-radius: 40%;
