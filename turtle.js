@@ -1,3 +1,5 @@
+var turtle = document.getElementById('turtle')
+
 jQuery(document).ready(function() {
 
   var mouseX = 0, mouseY = 0;
@@ -11,9 +13,7 @@ jQuery(document).ready(function() {
   setInterval(function(){
     xp += ((mouseX - xp)/1000);
     yp += ((mouseY - yp)/1000);
-    $("#turtle").css({left: xp +'px', top: yp +'px'});
+    $(turtle).css({left: xp +'px', top: yp +'px'});
   }, 2);
-  
-
 
 });
