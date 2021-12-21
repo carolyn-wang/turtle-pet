@@ -9,21 +9,11 @@
     TURTLE 
 ---------------------------*/
 
-.circle {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-
-/*turtle*/
-
 .turtle {
   width: 200px;
   height: 200px;
   animation: walking-turtle-03 2s ease-in-out infinite alternate;
-  position: relative;
+  position: absolute;
   top: 58%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
@@ -155,10 +145,10 @@
   left: 20%;
 }
 #top-r, #bot-r{
-  right: 15%;
+  right: 10%;
 }
 #top-l, #top-r{
-  top: 15%;
+  top: 20%;
 }
 #bot-l, #bot-r{
   bottom: 10%;
