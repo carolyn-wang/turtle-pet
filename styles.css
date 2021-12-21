@@ -11,11 +11,9 @@
 
 .circle {
   position: absolute;
-  border: solid 1px var(--ui-dark-green);
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: var(--ui-dark-green);
 }
 
 

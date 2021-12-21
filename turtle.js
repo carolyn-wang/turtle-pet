@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
   setInterval(function(){
     xp += ((mouseX - xp)/800);
     yp += ((mouseY - yp)/800);
-    $("#circle").css({left: xp +'px', top: yp +'px'});
+    $("#turtle").css({left: xp +'px', top: yp +'px'});
   }, 2);
 
 });
