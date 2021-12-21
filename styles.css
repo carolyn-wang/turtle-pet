@@ -1,8 +1,7 @@
 :root {
-  --ui-background-color: rgba(55, 190, 252, 0.61);
-  --ui-background-light: rgba(98, 192, 236, 0.164);
-
+  --ui-background-color: rgb(114, 205, 241);
   --ui-dark-green: rgb(6, 114, 78);
+  --ui-light-green: #8be0b3;
   --ui-dark-shell: #363f3a;
   --ui-shadow: rgba(21, 24, 26, 0.205);
 }
@@ -26,7 +25,7 @@
   width: 45px;
   height: 60px;
   border-radius: 50%;
-  background-color: #82C49F;
+  background-color: var(--ui-light-green);
   position: relative;
   top: 5%;
   left: 50%;
@@ -78,10 +77,16 @@
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
-  box-shadow: 4px var(--ui-shadow);
+  box-shadow: 4px 4px 4px 4px var(--ui-shadow);
   top: 60%;
-  left: 60%;
+  left: 40%;
   transform: translate(-50%, -50%);
+}
+
+.turtle__head,
+.turtle__legs,
+.turtle__shell{
+  box-shadow: 0px 10px 10px var(--ui-shadow) ;
 }
 
 
@@ -127,7 +132,7 @@
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 35px solid #84C3A0;
+  border-top: 35px solid var(--ui-light-green);
   position: absolute;
   bottom: -8%;
   left: 50%;
@@ -139,7 +144,7 @@
   width: 20px;
   height: 40px;
   border-radius: 40%;
-  background-color: #82C49F;
+  background-color: var(--ui-light-green);
   content: '';
   position: absolute;
 }
@@ -168,12 +173,6 @@
   animation: walking-turtle-02 1.5s ease-in-out infinite alternate;
 }
 
-
-/* body {
-  width: 100vw;
-  height: 100vh;
-  background-color: #DEF4E5;
-} */
 
 @keyframes walking-turtle-01 {
   0% {
@@ -250,9 +249,10 @@ html, body, #canvas {
     height: 100vh;
     margin: 0;
     position: absolute;
+    -webkit-perspective: 0px;
   }
   body {
-    background-color: #0078afc7;
+    background-color: var(--ui-background-color);
   }
   #wrapper {
     position: absolute;
@@ -267,10 +267,11 @@ html, body, #canvas {
 /* ------------------------
     RIPPLE (BACKGROUND) 
 ---------------------------*/
+/* https://codepen.io/daless14/pen/ELFgj */
 
 .ripple,.ripple:before,.ripple:after {
   display:block;
-  border-radius:2px;
+  border-radius:4px;
   width:2px;
   height:2px;
   -webkit-animation:rip 6s infinite ease-out;
@@ -302,9 +303,50 @@ html, body, #canvas {
                0 0 0 0 rgba(0,0,0,0.08);
   }
   100% {
-    box-shadow:0 0 40px 200px var(--ui-background-light),
-               0 0 10px 210px transparent,
-               0 0 30px 220px var(--ui-background-light),
-               0 0 5px 230px transparent;
+    box-shadow:0 0 40px 100px var(--ui-background-light),
+               0 0 10px 110px transparent,
+               0 0 30px 120px var(--ui-background-light),
+               0 0 5px 130px transparent;
+  }
+}
+
+
+/* second ripple*/
+.rim1, .rim2, .rim3, #cursor{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 0em;
+  height: 0em;
+  border: white .1em solid;
+  background: var(--ui-background-color);
+}
+.rim1 {
+  -webkit-animation: expand 4s linear infinite;
+}
+.rim2 {
+  -webkit-animation: expand 4s linear 2s infinite;
+}
+.rim3 {
+  -webkit-animation: expand 4s linear 5s infinite;
+}
+
+@-webkit-keyframes expand {
+  0% {
+    top: calc(50% - .5em);
+    left: calc(50% - .5em);
+    width: 1em;
+    height: 1em;
+    border: white .1em solid;
+    opacity: 0.5;
+  }
+  100% {
+    top: calc(50% - 5.5em);
+    left: calc(50% - 5.5em);
+    width: 14em;
+    height: 14em;
+    border: white .5em solid;
+    opacity: 0;
   }
 }
