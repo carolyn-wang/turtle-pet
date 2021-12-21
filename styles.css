@@ -1,7 +1,6 @@
 :root {
   --ui-background-color: rgba(55, 190, 252, 0.61);
-  --ui-dark-green: green;
-  --ui-light-green: rgb(13, 255, 13);
+  --ui-dark-green: rgb(6, 114, 78);
   --ui-dark-shell: #363f3a;
 
 }
@@ -41,40 +40,57 @@
 }
 
 .turtle__head {
-  width: 75px;
-  height: 85px;
+  width: 45px;
+  height: 60px;
   border-radius: 50%;
   background-color: #82C49F;
   position: relative;
-  top: 22%;
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* turtle right eye */
+/* turtle eyes */
 .turtle__head:before,
 .turtle__head:after {
-  top: 20px;
-  width: 8px;
-  height: 8px;
+  top: 15px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: var(--ui-dark-shell);
   content: '';
   position: absolute;
 }
-
 .turtle__head::before {
-  left: 13px;
+  left: 8px;
+}
+.turtle__head::after {
+  right: 8px;
 }
 
-.turtle__head::after {
-  right: 13px;
+/* red spots on head */
+.turtle__spot:before,
+.turtle__spot:after {
+  top: 25px;
+  width: 6px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0.6;
+  content: '';
+  position: absolute;
+}
+.turtle__spot::before {
+  left: 4px;
+}
+.turtle__spot::after {
+  right: 4px;
 }
 
 
 .turtle__shell {
-  width: 150px;
-  height: 160px;
+  width: 140px;
+  height: 150px;
   background-color: var(--ui-dark-shell);
   border-radius: 50%;
   overflow: hidden;
@@ -93,9 +109,9 @@
 }
 
 .turtle__shell:before {
-  width: 100px;
+  width: 110px;
   height: 135px;
-  background-color: red;
+  background-color: var(--ui-dark-green);
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
@@ -109,30 +125,6 @@
   top: 0;
 }
 
-
-div:before,
-div:after {
-  content: '';
-  position: absolute;
-  left: 0;
-}
-
-div:before {
-  top: -30px;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 30px solid #636E72;
-}
-
-div:after {
-  bottom: -30px;
-  left: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-top: 30px solid #636E72;
-}
-
-
 .turtle__tail {
   width: 0;
   height: 0;
@@ -140,27 +132,41 @@ div:after {
   border-right: 8px solid transparent;
   border-top: 35px solid #84C3A0;
   position: absolute;
-  bottom: 24%;
+  bottom: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.turtle__legs {
-  width: 30px;
-  height: 300px;
-  border-radius: 20%;
+/* turtle legs */
+.turtle__legs{
+  width: 20px;
+  height: 40px;
+  border-radius: 40%;
   background-color: #82C49F;
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
 }
 
-.turtle__legs-left {
+#top-l, #bot-l{
+  left: 38%;
+}
+#top-r, #bot-r{
+  right: 36%;
+}
+#top-l, #top-r{
+  top: 40%;
+}
+#bot-l, #bot-r{
+  bottom: 30%;
+}
+
+
+.slant1{
   transform: translate(-50%, -50%) rotate(-45deg);
   animation: walking-turtle-01 2s ease-in-out infinite alternate;
 }
 
-.turtle__legs-right {
+.slant2 {
   transform: translate(-50%, -50%) rotate(45deg);
   animation: walking-turtle-02 2s ease-in-out infinite alternate;
 }
