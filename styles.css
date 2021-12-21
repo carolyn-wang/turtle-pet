@@ -2,16 +2,8 @@
   --ui-background-color: rgba(55, 190, 252, 0.61);
   --ui-dark-green: rgb(6, 114, 78);
   --ui-dark-shell: #363f3a;
-
+  --ui-shadow: rgba(21, 24, 26, 0.205);
 }
-
-/* body, html {
-	position: relative;
-	height: 100%; 
-	width : 100%;  
-	margin: 0;
-  background-color: var(--ui-background-color);
-} */
 
 /* ------------------------
     TURTLE 
@@ -85,6 +77,20 @@
 }
 .turtle__spot::after {
   right: 4px;
+}
+
+
+.turtle__shadow {
+  width: 130px;
+  height: 140px;
+  background-color: var(--ui-shadow);
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 4px var(--ui-shadow);
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -249,9 +255,10 @@
 ---------------------------*/
 
 html, body, #canvas {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
+    position: absolute;
   }
   body {
     background-color: #0078afc7;
