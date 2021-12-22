@@ -1,6 +1,7 @@
 :root {
   --ui-background-color: rgb(114, 205, 241);
   --ui-dark-green: rgb(6, 114, 78);
+  --ui-light-green: rgb(10, 160, 110);
   --ui-light-green: #8be0b3;
   --ui-dark-shell: #363f3a;
   --ui-shadow: rgba(21, 24, 26, 0.205);
@@ -13,7 +14,7 @@
 .turtle {
   width: 200px;
   height: 200px;
-  animation: walking-turtle-03 2s ease-in-out infinite alternate;
+  animation: swimming-turtle-03 2s ease-in-out infinite alternate;
   position: absolute;
   top: 58%;
   left: 50%;
@@ -51,7 +52,7 @@
 }
 
 /* red spots on head */
-.turtle__spot:before,
+/*.turtle__spot:before,
 .turtle__spot:after {
   top: 25px;
   width: 6px;
@@ -61,12 +62,32 @@
   opacity: 0.6;
   content: '';
   position: absolute;
-}
+} 
 .turtle__spot::before {
   left: 4px;
 }
 .turtle__spot::after {
   right: 4px;
+}*/
+
+/* pink spots on head */
+.turtle__spot:before,
+.turtle__spot:after {
+  top: 25px;
+  width: 10px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: pink;
+  opacity: 0.6;
+  content: '';
+  position: absolute;
+}
+
+.turtle__spot::before {
+  left: 2px;
+}
+.turtle__spot::after {
+  right: 2px;
 }
 
 
@@ -93,7 +114,7 @@
 .turtle__shell {
   width: 140px;
   height: 150px;
-  background-color: var(--ui-dark-shell);
+  background-color: var(--ui-dark-green);
   border-radius: 50%;
   overflow: hidden;
   position: absolute;
@@ -101,6 +122,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* red slider shell */
+/* .turtle__shell {
+  background-color: var(--ui-dark-shell);
+} */
 
 .turtle__shell:before,
 .turtle__shell:after {
@@ -111,12 +137,23 @@
 }
 
 .turtle__shell:before {
-  width: 110px;
-  height: 135px;
-  background-color: var(--ui-dark-green);
+  width: 135px; 
+  height: 145px; 
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  background-color: var(--ui-light-green);
+  background-image: url("turtle.png");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-size: cover; 
 }
+
+/* red slider shell */
+/* .turtle__shell:before {
+  background-color: var(--ui-dark-green);
+  width: 100px;
+  height: 135px;
+} */
 
 /* shell highlight */
 .turtle__shell:after {
@@ -156,7 +193,7 @@
   right: 10%;
 }
 #top-l, #top-r{
-  top: 20%;
+  top: 25%;
 }
 #bot-l, #bot-r{
   bottom: 10%;
@@ -165,60 +202,60 @@
 
 #top-l, #bot-r{
   transform: translate(-50%, -50%) rotate(-45deg);
-  animation: walking-turtle-01 1.5s ease-in-out infinite alternate;
+  animation: swimming-turtle-01 1.5s ease-in-out infinite alternate;
 }
 
 #top-r, #bot-l {
   transform: translate(-50%, -50%) rotate(45deg);
-  animation: walking-turtle-02 1.5s ease-in-out infinite alternate;
+  animation: swimming-turtle-02 1.5s ease-in-out infinite alternate;
 }
 
 
-@keyframes walking-turtle-01 {
+@keyframes swimming-turtle-01 {
   0% {
-    transform: translate(-50%, -60%) rotate(-40deg)
+    transform: translate(-50%, -50%) rotate(-20deg)
   }
 
   25% {
-    transform: translate(-50%, -50%) rotate(-45deg)
+    transform: translate(-50%, -50%) rotate(-60deg)
   }
 
   50% {
-    transform: translate(-50%, -50%) rotate(-30deg)
+    transform: translate(-20%, -50%) rotate(-30deg)
   }
 
   75% {
-    transform: translate(-50%, -50%) rotate(-45deg)
+    transform: translate(-50%, -50%) rotate(-60deg)
   }
 
   100% {
-    transform: translate(-50%, -50%) rotate(-40deg)
+    transform: translate(-50%, -50%) rotate(-20deg)
   }
 }
 
-@keyframes walking-turtle-02 {
+@keyframes swimming-turtle-02 {
   0% {
-    transform: translate(-50%, -50%) rotate(40deg)
+    transform: translate(-50%, -50%) rotate(20deg)
   }
 
   25% {
-    transform: translate(-50%, -50%) rotate(45deg)
+    transform: translate(-50%, -50%) rotate(60deg)
   }
 
   50% {
-    transform: translate(-50%, -50%) rotate(35deg)
-  }
-
-  75% {
-    transform: translate(-50%, -50%) rotate(45deg)
-  }
-
-  100% {
     transform: translate(-50%, -50%) rotate(30deg)
   }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(60deg)
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(20deg)
+  }
 }
 
-@keyframes walking-turtle-03 {
+@keyframes swimming-turtle-03 {
   0% {
     transform: translate(-50%, -50%) rotate(0deg)
   }
