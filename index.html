@@ -19,23 +19,21 @@
 <body>
 
     <main class="turtle" id="turtle">
-        <!-- <span class="ripple">    </span> -->
-        <div class="ripples">
-            <div class="rim1"></div>
-            <div class="rim2"></div>
-            <div class="rim3"></div>
-        </div>
-        <div class="turtle__shadow"></div>
-        <div class="turtle__body" id="turtle__body">
+        <div class="turtle__body" id="pointer">
+            <div class="ripples">
+                <div class="rim1"></div>
+                <div class="rim2"></div>
+                <div class="rim3"></div>
+            </div>
             <div class="turtle__head">
                 <div class="turtle__spot"></div>
             </div>
             <section class="turtle__legs">
-            <div id="top-l"></div>
-            <div id="bot-l"></div>
-            <div id="top-r"></div>
-            <div id="bot-r"></div>
-        </section>
+                <div id="top-l"></div>
+                <div id="bot-l"></div>
+                <div id="top-r"></div>
+                <div id="bot-r"></div>
+            </section>
             <div class="turtle__tail"></div>
             <section class="turtle__shell">
             </section>
@@ -57,6 +55,7 @@
 
     <!-- Load React components -->
     <script src="turtle.js" types="text/javascript"></script>
+    <script src="rotate.js" types="text/javascript"></script>
 </body>
 
 </html>
