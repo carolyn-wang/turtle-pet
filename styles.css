@@ -22,7 +22,7 @@
   transition: all 5x ease-in-out;
 }
 
-#pointer {
+#rotate {
   position: relative;
   transform-origin: center;
   /* display: absolute; */
@@ -35,7 +35,7 @@
   border-radius: 50%;
   background-color: var(--ui-light-green);
   position: absolute;
-  top: 5%;
+  top: -85px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -102,7 +102,6 @@
 .turtle__shell{
   box-shadow: 0px 10px 15px var(--ui-shadow) ;
 }
-
 
 .turtle__shell {
   width: 140px;
@@ -180,16 +179,16 @@
 }
 
 #top-l, #bot-l{
-  left: 20%;
+  left: 40px;
 }
 #top-r, #bot-r{
-  right: 10%;
+  right: 30px;
 }
 #top-l, #top-r{
-  top: 25%;
+  top: -60px;
 }
 #bot-l, #bot-r{
-  bottom: 10%;
+  bottom: -90px;
 }
 
 

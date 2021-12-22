@@ -1,32 +1,32 @@
 // credit: code modified from http://thenewcode.com/1124/Rotating-Elements-To-Mouse-and-Touch-Locations-Using-JavaScript
 document.addEventListener("DOMContentLoaded", function() {
-	var pointer = document.getElementById("pointer"),
-	pointerBox = pointer.getBoundingClientRect(),
-	centerPoint = window.getComputedStyle(pointer).transformOrigin,
+	var rotate = document.getElementById("rotate"),
+	rotateBox = rotate.getBoundingClientRect(),
+	centerPoint = window.getComputedStyle(rotate).transformOrigin,
 	centers = centerPoint.split(" ");
 
-	function rotatePointer(e) {
-        var pointerEvent = e;
+	function rotaterotate(e) {
+        var rotateEvent = e;
           
        	if (e.targetTouches && e.targetTouches[0]) {
           		e.preventDefault(); 
-          		pointerEvent = e.targetTouches[0];
-          		mouseX = pointerEvent.pageX;
-          		mouseY = pointerEvent.pageY;
+          		rotateEvent = e.targetTouches[0];
+          		mouseX = rotateEvent.pageX;
+          		mouseY = rotateEvent.pageY;
     		} else {
           		mouseX = e.clientX,
           		mouseY = e.clientY;
     		}
 
- var centerY = pointerBox.top + parseInt(centers[1]) - window.pageYOffset,
- centerX = pointerBox.left + parseInt(centers[0]) - window.pageXOffset,
+ var centerY = rotateBox.top + parseInt(centers[1]) - window.pageYOffset,
+ centerX = rotateBox.left + parseInt(centers[0]) - window.pageXOffset,
  radians = Math.atan2(mouseX - centerX, mouseY - centerY),
  degrees = (radians * (180 / Math.PI) * -1) + 180 ; 
- pointer.style.transform = 'rotate('+degrees+'deg)';
+ rotate.style.transform = 'rotate('+degrees+'deg)';
 };
 
-window.addEventListener('mousemove', rotatePointer);
-window.addEventListener('touchmove', rotatePointer);
-window.addEventListener('touchstart', rotatePointer);
+window.addEventListener('mousemove', rotaterotate);
+window.addEventListener('touchmove', rotaterotate);
+window.addEventListener('touchstart', rotaterotate);
 
 })
