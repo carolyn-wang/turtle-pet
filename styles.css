@@ -19,7 +19,6 @@
   top: 58%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  z-index: 1000;
 }
 
 .turtle__head {
@@ -277,6 +276,7 @@
   }
 }
 
+
 /* ------------------------
     WATER (BACKGROUND) 
 ---------------------------*/
@@ -371,7 +371,7 @@ html, body, #canvas {
 
 @-webkit-keyframes expand {
   0% {
-    top: calc(50% - .5em);
+    top: calc(50%);
     left: calc(50% - .5em);
     width: 1em;
     height: 1em;
@@ -379,8 +379,8 @@ html, body, #canvas {
     opacity: 0.5;
   }
   100% {
-    top: calc(50% - 5.5em);
-    left: calc(50% - 5.5em);
+    top: calc(50%);
+    left: calc(50% - 7em);
     width: 14em;
     height: 14em;
     border: white .5em solid;
